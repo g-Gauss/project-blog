@@ -22,6 +22,7 @@ function DarkModeToggle({ initialTheme, ...delegated }) {
       expires: 1000,
     });
 
+    // Update the colors on the root element
     const root = document.documentElement;
     const colors = nextTheme === "light" ? LIGHT_TOKENS : DARK_TOKENS;
 
