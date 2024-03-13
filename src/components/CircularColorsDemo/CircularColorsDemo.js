@@ -79,7 +79,7 @@ function CircularColorsDemo() {
         <div className={styles.actions}>
           <button onClick={isPlaying ? handlePause : handlePlay}>
             {isPlaying ? <Pause /> : <Play />}
-            <VisuallyHidden>Play</VisuallyHidden>
+            <VisuallyHidden>{isPlaying ? "Pause" : "Play"}</VisuallyHidden>
           </button>
           <button onClick={handleReset}>
             <RotateCcw />
