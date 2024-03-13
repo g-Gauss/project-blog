@@ -7,6 +7,7 @@ import BlogHero from "@/components/BlogHero";
 import { loadBlogPost } from "@/helpers/file-helpers";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { BLOG_TITLE } from "@/constants";
+import CodeSnippet from "@/components/CodeSnippet";
 
 export async function generateMetadata({ params }) {
   const { postSlug: slug } = params;
@@ -31,7 +32,7 @@ async function BlogPost({ params }) {
       />
 
       <div className={styles.page}>
-        <MDXRemote source={content} />
+        <MDXRemote source={content} components={{ pre: CodeSnippet }} />
       </div>
     </article>
   );
